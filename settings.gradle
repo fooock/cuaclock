@@ -1,0 +1,17 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    // we apply the version plugin here to be able to use it
+    // in the plugin section
+    apply from: 'versions.gradle'
+
+    plugins {
+        id 'io.quarkus' version "${versions.quarkus}"
+    }
+}
+
+rootProject.name = 'cuaclock'
+include(':cuaclock-example')

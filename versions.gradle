@@ -1,0 +1,8 @@
+ext.versions = [
+    quarkus: '2.4.1.Final',
+    lombok: '1.18.22',
+    junit: [
+        api: '5.7.0',
+        engine: '5.7.0'
+    ]
+]

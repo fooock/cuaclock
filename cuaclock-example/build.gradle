@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'io.quarkus'
+}
+
+dependencies {
+    implementation enforcedPlatform("io.quarkus.platform:quarkus-bom:${versions.quarkus}")
+    implementation 'io.quarkus:quarkus-scheduler'
+    implementation 'io.quarkus:quarkus-arc'
+    implementation 'io.quarkus:quarkus-config-yaml'
+
+    compileOnly "org.projectlombok:lombok:${versions.lombok}"
+    annotationProcessor "org.projectlombok:lombok:${versions.lombok}"
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${versions.junit.api}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${versions.junit.api}"
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+apply from: 'versions.gradle'
+
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    group 'com.fooock'
+    version '0.0.1'
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_16
+        targetCompatibility = JavaVersion.VERSION_16
+    }
+
+    compileJava {
+        options.encoding = 'UTF-8'
+        options.compilerArgs << '-parameters'
+    }
+
+    compileTestJava {
+        options.encoding = 'UTF-8'
+    }
+}
