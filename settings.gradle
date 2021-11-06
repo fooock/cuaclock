@@ -10,8 +10,15 @@ pluginManagement {
 
     plugins {
         id 'io.quarkus' version "${versions.quarkus}"
+        id 'io.quarkus.extension' version "${versions.quarkus}"
     }
 }
 
 rootProject.name = 'cuaclock'
+
 include(':cuaclock-example')
+include(':cuaclock-core')
+
+include(':cuaclock-quarkus-extension')
+include(':cuaclock-quarkus-extension:deployment')
+include(':cuaclock-quarkus-extension:runtime')
