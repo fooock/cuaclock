@@ -5,9 +5,10 @@ plugins {
 
 dependencies {
     implementation enforcedPlatform("io.quarkus.platform:quarkus-bom:${versions.quarkus}")
-    implementation 'io.quarkus:quarkus-scheduler'
-    implementation 'io.quarkus:quarkus-arc'
-    implementation 'io.quarkus:quarkus-config-yaml'
+    implementation 'io.quarkus:quarkus-scheduler',
+        'io.quarkus:quarkus-arc',
+        'io.quarkus:quarkus-config-yaml',
+        "com.fooock:quarkus-cuaclock:${versions.cuaclock}"
 
     compileOnly "org.projectlombok:lombok:${versions.lombok}"
     annotationProcessor "org.projectlombok:lombok:${versions.lombok}"

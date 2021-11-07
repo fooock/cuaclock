@@ -1,3 +1,25 @@
 plugins {
-    id 'java'
+    id 'java-library'
+    id 'io.quarkus.extension'
+    id 'maven-publish'
+}
+
+quarkusExtension {
+    deploymentModule = ':cuaclock-quarkus-extension:deployment'
+    deploymentArtifact = "com.fooock:quarkus-cuaclock-deployment:${versions.cuaclock}"
+}
+
+dependencies {
+    implementation platform("io.quarkus:quarkus-bom:${versions.quarkus}")
+    implementation 'io.quarkus:quarkus-core',
+        'io.quarkus:quarkus-undertow'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'quarkus-cuaclock'
+            from components.java
+        }
+    }
 }

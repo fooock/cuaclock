@@ -6,11 +6,12 @@ apply from: 'versions.gradle'
 
 subprojects {
     repositories {
+        mavenLocal()
         mavenCentral()
     }
 
     group 'com.fooock'
-    version '0.0.1'
+    version "${versions.cuaclock}"
 
     java {
         sourceCompatibility = JavaVersion.VERSION_16

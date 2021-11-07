@@ -1,4 +1,5 @@
 ext.versions = [
+    cuaclock: '0.0.1',
     quarkus: '2.4.1.Final',
     lombok: '1.18.22',
     junit: [
