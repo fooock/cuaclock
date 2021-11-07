@@ -1,13 +1,12 @@
 plugins {
-    id 'java-library'
+    id 'java'
 }
 
 dependencies {
     implementation enforcedPlatform("io.quarkus:quarkus-bom:${versions.quarkus}")
     annotationProcessor "io.quarkus:quarkus-extension-processor:${versions.quarkus}"
 
-    implementation 'io.quarkus:quarkus-core-deployment',
-        'io.quarkus:quarkus-arc-deployment',
+    implementation 'io.quarkus:quarkus-arc-deployment',
         project(':cuaclock-quarkus-extension:runtime')
 
     testImplementation 'io.quarkus:quarkus-junit5-internal'

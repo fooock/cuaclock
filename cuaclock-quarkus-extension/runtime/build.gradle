@@ -1,11 +1,3 @@
 plugins {
-    id 'java-library'
-}
-
-dependencies {
-    implementation enforcedPlatform("io.quarkus:quarkus-bom:${versions.quarkus}")
-    annotationProcessor "io.quarkus:quarkus-extension-processor:${versions.quarkus}"
-
-    implementation 'io.quarkus:quarkus-core',
-        'io.quarkus:quarkus-arc'
+    id 'java'
 }
